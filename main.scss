@@ -24,34 +24,53 @@ body {
       height: 600px;
       max-width: 350px;
    }
+
    @media (max-width:768px) {
       top: 0;
       bottom: 0;
       height: 100%;
       width: 100vw;
    }
+
    @media (min-width:768px) {
       right: -400px;
    }
+
    @media (max-width:768px) {
       right: -120%;
    }
 
    overflow: hidden;
 
-   &._active {
-      @media (min-width:768px) {
-         right: 20px;
-         border-radius: 20px;
-      }
-      @media (max-width:768px) {
-         right: 0;
-         background: #000;
-      }
-   }
+   // &._active {
+   //    @media (min-width:768px) {
+   //       right: 20px;
+   //       border-radius: 20px;
+   //    }
+
+   //    @media (max-width:768px) {
+   //       right: 0;
+   //       background: #000;
+   //    }
+   // }
 
    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .5));
 }
+
+@media (min-width:768px) {
+   .widget._active {
+      right: 20px;
+      border-radius: 20px;
+   }
+}
+
+@media (max-width:768px) {
+   .widget._active {
+      right: 0;
+      background: #000;
+   }
+}
+
 
 .widget-btn {
    position: fixed;
